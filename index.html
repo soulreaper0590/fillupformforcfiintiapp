@@ -5,40 +5,47 @@
 	<link  href="bootstrap.css" rel="stylesheet">
 </head>
 <body>
-<form>
+<form data-toggle="validator" role="form">
 <div class="container">
 	<h1> Fill Out The Form</h1>
 	<form>
-	<p>
-		<label for="email">Name</label>
-		<input type="text" class="form-control" id="tokenfield" />
-	</p>
-  <div class="form-group">
-    <label for="email">Email address:</label>
-    <input type="email" class="form-control" id="email" value="abcxyz@example.com">
+	
+	<div class="form-group">
+		<label for="email">First Name</label>
+		<input type="text" class="form-control" id="tokenfield" required />
   </div>
   <div class="form-group">
+		<label for="email">Last Name</label>
+		<input type="text" class="form-control" id="tokenfield" required />
+	</div>
+	
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email" placeholder="abc@example.com" required>
+  </div>
+  <div class="form-group has-warning">
     <label for="pwd"> Create Password:</label>
-    <input type="password" class="form-control" id="pwd">
+    <input type="password" class="form-control" id="pwd" id="inputWarning1" required>
   </div>
   <div class="form-group">
     <label for="pwd"> Renter Password:</label>
-    <input type="password" class="form-control" id="pwd">
+    <input type="password" class="form-control" id="pwd" required="">
   </div>
-  <p>
+  <div class="form-group">
 		<label for="email">Date Of birth</label>
-		<input type="text" class="form-control" id="tokenfield" value="DD/MM/YYYY" />
-	</p>
-	
-	<label for="exampleSelect1">Gender</label>
-    <select class="form-control" id="exampleSelect1">
+		<input type="text" class="form-control" id="tokenfield" placeholder="DD/MM/YYYY"  required >
+	</div>
+	<div class="form-group">
+	 <label for="exampleSelect1">Gender</label>
+    <select class="form-control" id="exampleSelect1" >
       <option>Male</option>
       <option>Female</option>
       <option>Other</option>   
     </select>
+   </div>
     <br>
     <label for="exampleSelect1">Country</label>
-    <select class="form-control" id="exampleSelect1">
+    <select class="form-control" id="exampleSelect1" required="">
       <option>America</option>
       <option>Afghanistan</option>
       <option>France</option>
@@ -51,13 +58,13 @@
 
     <br>
     <br>
-    <p>
+  <div class="form-group">
 		<label for="email">Cell Number </label>
-		<input type="text" class="form-control" id="tokenfield" value="6655566500" />
-	</p>
+		<input type="text" class="form-control" id="tokenfield" placeholder="6655566500" required="" />
+	</div>
 
   <button type="submit" class="btn btn-default">Submit</button>
-</form>
+
 </div>
 </form>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
