@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shaastra cube</title>
+	<style>
+	.faces{
+		position:absolute;
+		top:200px; 
+		left:350px;
+		width:220px ;
+		height:220px ;
+		border: 1px solid black;
+		transform-origin: center center -110px; 
+		backface-visibility: hidden;
+		background: url('./flipkart.jpg');
+		
+	}
+
+	#face1{
+		-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) ;
+		-webkit-animation: animat_face1 10s infinite;
+	}
+	#face2{
+		-webkit-transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg) ;
+		-webkit-animation: animat_face2 10s infinite;
+	}
+	#face3{
+		-webkit-transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) ;
+		-webkit-animation: animat_face3 10s infinite;
+
+	}
+	#face4{
+		-webkit-transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg) ;
+
+		-webkit-animation: animat_face4 10s infinite;
+
+	}
+	#face5{
+		-webkit-transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg) ;
+		-webkit-animation: animat_face5 10s infinite;
+
+	}
+	#face6{
+		-webkit-transform: rotateX(270deg) rotateY(0deg) rotateZ(0deg) ;
+		
+
+		/*-webkit-animation: animat_face2 10s infinite;*/
+
+	}
+
+	
+	@-webkit-keyframes animat_face1 {
+
+		0% {
+			-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) ;
+		}
+		12.5%{
+			-webkit-transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg) ;
+		}
+		25%{
+			-webkit-transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) ;
+		}
+		37.5%{
+			-webkit-transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg) ;
+		}
+		50%{
+			-webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg) ;
+		}
+		62.5%{
+			-webkit-transform: rotateX(90deg) rotateY(360deg) rotateZ(0deg) ;
+		}
+		75%{
+			-webkit-transform: rotateX(180deg) rotateY(360deg) rotateZ(0deg) ;
+		}
+		87.5%{
+			-webkit-transform: rotateX(270deg) rotateY(360deg) rotateZ(0deg) ;
+		}
+		100%{
+			-webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(0deg) ;
+		}
+
+
+
+	}
+	@-webkit-keyframes animat_face2 {
+
+		0% {
+			-webkit-transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg) ;
+		}
+		12.5%{
+			-webkit-transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) ;
+		}
+		25%{
+			-webkit-transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg) ;
+		}
+		37.5%{
+			-webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg) ;
+		}
+		50%{
+			-webkit-transform: rotateX(0deg) rotateY(450deg) rotateZ(0deg) ;
+		}
+		62.5%{
+			-webkit-transform: rotateX(90deg) rotateY(450deg) rotateZ(0deg) ;
+		}
+		75%{
+			-webkit-transform: rotateX(180deg) rotateY(450deg) rotateZ(0deg) ;
+		}
+		87.5%{
+			-webkit-transform: rotateX(270deg) rotateY(450deg) rotateZ(0deg) ;
+		}
+		100%{
+			-webkit-transform: rotateX(360deg) rotateY(450deg) rotateZ(0deg) ;
+		}
+	}
+	@-webkit-keyframes animat_face3 {
+
+		0% {
+			-webkit-transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) ;
+		}
+		12.5%{
+			-webkit-transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg) ;
+		}
+		25%{
+			-webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg) ;
+		}
+		37.5%{
+			-webkit-transform: rotateX(0deg) rotateY(450deg) rotateZ(0deg) ;
+		}
+		50%{
+			-webkit-transform: rotateX(0deg) rotateY(540deg) rotateZ(0deg) ;
+		}
+		62.5%{
+			-webkit-transform: rotateX(90deg) rotateY(540deg) rotateZ(0deg) ;
+		}
+		75%{
+			-webkit-transform: rotateX(180deg) rotateY(540deg) rotateZ(0deg) ;
+		}
+		87.5%{
+			-webkit-transform: rotateX(270deg) rotateY(540deg) rotateZ(0deg) ;
+		}
+		100%{
+			-webkit-transform: rotateX(360deg) rotateY(540deg) rotateZ(0deg) ;
+		}
+
+
+
+	}
+	@-webkit-keyframes animat_face4 {
+
+		0% {
+			-webkit-transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg) ;
+		}
+		12.5%{
+			-webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg) ;
+		}
+		25%{
+			-webkit-transform: rotateX(0deg) rotateY(450deg) rotateZ(0deg) ;
+		}
+		37.5%{
+			-webkit-transform: rotateX(0deg) rotateY(540deg) rotateZ(0deg) ;
+		}
+		50%{
+			-webkit-transform: rotateX(0deg) rotateY(630deg) rotateZ(0deg) ;
+		}
+		62.5%{
+			-webkit-transform: rotateX(90deg) rotateY(630deg) rotateZ(0deg) ;
+		}
+		75%{
+			-webkit-transform: rotateX(180deg) rotateY(630deg) rotateZ(0deg) ;
+		}
+		87.5%{
+			-webkit-transform: rotateX(270deg) rotateY(630deg) rotateZ(0deg) ;
+		}
+		100%{
+			-webkit-transform: rotateX(360deg) rotateY(630deg) rotateZ(0deg) ;
+		}
+
+
+
+	}
+	@-webkit-keyframes animat_face5 {
+
+		0% {
+			-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) ;
+		}
+		12.5%{
+			-webkit-transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg) ;
+		}
+		25%{
+			-webkit-transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) ;
+		}
+		37.5%{
+			-webkit-transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg) ;
+		}
+		50%{
+			-webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg) ;
+		}
+		62.5%{
+			-webkit-transform: rotateX(90deg) rotateY(360deg) rotateZ(0deg) ;
+		}
+		75%{
+			-webkit-transform: rotateX(180deg) rotateY(360deg) rotateZ(0deg) ;
+		}
+		87.5%{
+			-webkit-transform: rotateX(270deg) rotateY(360deg) rotateZ(0deg) ;
+		}
+		100%{
+			-webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(0deg) ;
+		}
+
+
+
+	}
+		
+	</style>
+	
+</head>
+<body>
+	<div class="faces" id="face1">
+		f1
+	</div>
+	<div class="faces" id="face2">
+		f2
+	</div>
+	<div class="faces" id="face3">
+		f3
+	</div>
+	<div class="faces" id="face4">
+		f4
+	</div>
+	<div  class="faces"  id="face5">
+		f5
+	</div>
+	<div class="faces" id="face6">
+		f6
+	</div>
+</body>
+</html>
