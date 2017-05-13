@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <!-- <meta charset="utf-8"> -->
     <title>to join fill form</title>
-    <link type="image/gif" rel="icon" href="E:\favicon.ico">
+  
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <style type="text/css">
+        .helpfname{
+          background-color: red;
+        }
+    </style> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="val.js" type="text/javascript"></script>
+    <!-- <script src="val.js" type="text/javascript"></script> -->
 </head>
 <body>
 <form data-toggle="validator" role="form">
-<div class = "text-center">
-<div class="container">
+<div class = "text-center">+++
+<div class="container" ng-app="">
 	<h1> Fill Out The Form</h1>
 	<form>
 	<div class="form-group" >
-		<label for="email">First Name</label>
+		<label for="email"> My first name is {{firstnameaj}}</label>
           <div class="input-group">
       <span class="input-group-addon">
          <span class="glyphicon glyphicon-user"></span>
          </span>
-		<input type="text" class="form-control" id="firstname" required placeholder="first name" />
+		<input type="text"  ng-model="firstnameaj" class="form-control" id="firstname"  placeholder="first name" />
       </div>
-  </div>
+                        <div   id="helpfname"></div>
+</div>
+
   <div class="form-group">
-		<label for="email" class="comtrol-label">Last Name</label>
+		<label for="email" class="comtrol-label"> {{firstnameaj}} your last name is {{lastnameaj}}</label>
           <div class="input-group">
       <span class="input-group-addon">
          <span class="glyphicon glyphicon-plus"></span>
          </span>
-		<input type="text" class="form-control" id="lastname" required  placeholder="last name" />
+		<input type="text"  ng-model="lastnameaj" class="form-control" id="lastname"  placeholder="lastname" />
     </div>
+                            <div  background-color: red; id="helplname"></div>
 	</div>
 	
   <div class="form-group">
-      <label for="email" class="comtrol-label">Email address:</label>
+      <label for="email" class="control-label">{{firstnameaj}}  {{lastnameaj}} Email address:</label>
       <div class="input-group">
       <span class="input-group-addon">
          <span class="glyphicon glyphicon-envelope"></span>
        </span>
-      <input type="email" class="form-control" id="email"  placeholder="abc@example.com" required>
+      <input type="email" class="form-control" id="email"  placeholder="abc@example.com" required >
      </div> 
   </div>
+                          <div  background-color: red; id="helpename"></div>
   <div class="form-group">
     <label for="inputPassword" class="control-label"> Create Password:</label>
               <div class="input-group">
       <span class="input-group-addon">
          <span class="glyphicon glyphicon-lock"></span>
          </span>
-      <input type="password" title="Please Follow Specification" required pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$" name = "pass" placeholder="Enter Password" class="form-control" id="password">
+      <input  type="Password" title="Please Follow Specification" required pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$" name = "pass" placeholder="Enter Password" class="form-control" id="password">
       </div>
     <div class="help-block">8 to 15 long - atleast 1 upper-case, 1 lower-case 1 number and <span data-toggle = "tooltip" title="The symbols ! @ # $ % ^ & * ( )"> <ins>  1 special character </ins> </span></div>
+    <div   id="helppass"></div>
   </div>
   <div class="form-group">
     <label for="pwd"> Renter Password:</label>
@@ -59,8 +71,9 @@
       <span class="input-group-addon">
          <span class="glyphicon glyphicon-repeat"></span>
          </span>
-              <input type="password" required id="cpassword"  pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$" name="cpass" class="form-control" placeholder="Re-enter Password">
+              <input required id="cpassword" type="Password"  pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$" name="cpass" class="form-control" placeholder="Re-enter Password"  >
               </div>
+              <div   id="helprepass"></div>
   </div>
   
 	
@@ -74,7 +87,7 @@
    </div>
     <br>
     <label for="exampleSelect1">Country</label>
-    <select class="form-control" id="exampleSelect1" required="">
+    <select class="form-control" id="exampleSelect1" required=""  >
       <option>America</option>
       <option>Afghanistan</option>
       <option>France</option>
@@ -97,9 +110,10 @@
 	</div>
 </div>
 
-  <button type="submit" class="btn btn-default">Submit</button>
-		<button class="btn btn-danger" href="/cube.html">cube</button>
-		<button class="btn btn-info">form with angular</button>
+  <button type="submit" class="btn btn-default" id="submitbutton" >Submit</button>
+   <!-- <button type="submit" class="btn btn-default"></button> -->
+    <!-- <button class="btn btn-danger" href="./cube.html">cube</button>
+    <button class="btn btn-info" onclick="passwordcheckfn()" >form with angular</button> -->
 
 </div>
 </div>
@@ -115,14 +129,14 @@
         </select>
       </div>
       </form>
-    </div> <!-- End Row -->-->
+    </div> -->
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   function hellofunction(){
     alert("hey there");
   }
-</script>
-<script type="text/javascript">
+</script> -->
+<!-- <script type="text/javascript">
   function functionchangecolour(){
     var newname;
     newname= document.getElementById('firstname');
@@ -132,6 +146,87 @@
 
   }
     }
+</script> -->
+<script type="text/javascript">
+  document.getElementById("submitbutton").addEventListener("click", tocheck);
+  document.getElementById("submitbutton").addEventListener("click", passwordcheckfn);
+  function tocheck(){
+    var pass1 = document.getElementById("cpassword").value;
+    var pass2 = document.getElementById("password").value;
+    var lastnamejs = document.getElementById("lastname").value;
+    var emailjs = document.getElementById("email").value;
+    
+    if (pass1==pass2) {
+       // alert(pass1);
+    }
+    else{
+       // alert( pass1 + "   "+pass2 + "these donot match");
+    }
+    var firstnamejs = document.getElementById("firstname").value;
+    if (firstnamejs=="") {
+      document.getElementById("helpfname").innerHTML ="hey there you went wrong";
+      document.getElementById("helpfname").style.color = "red";
+    }
+    if (lastnamejs=="") {
+      document.getElementById("helplname").innerHTML ="hey there you went wrong";
+      document.getElementById("helplname").style.color="red";
+    }
+    if (emailjs=="") {
+       document.getElementById("helpename").innerHTML ="hey there you went wrong";
+       document.getElementById("helpename").style.color="red";
+     }
+  }
+  function passwordcheckfn(){
+          var passjs = document.getElementById("password").value;
+          var repassjs = document.getElementById("cpassword").value;
+          var passlenghtjs = passjs.length ;
+          var i=1;
+          var character = " ";
+          var countuc=0;
+          var countlc = 0;
+          var countn=0;
+          // alert(passlenghtjs);
+           if (passlenghtjs>15||passlenghtjs<8) {
+              document.getElementById("helppass").innerHTML="please the fill in the specified number of character";
+              document.getElementById("helppass").style.color = "red";
+           }
+           else{
+              //alert("im in the else loop");
+              while(i<=passlenghtjs){
+                character = passjs.charAt(i);
+                if (character == character.toUpperCase() ) {
+                  countuc++;
+                }
+                if (character == character.toLowerCase()) {
+                  countlc++;
+                }
+                if(!isNaN(character * 1)){
+                  countn++;
+                }
+                i++;
+              } 
+              countlc--;
+              countuc--;
+              countn--;
+              // alert(countlc);
+              // alert(countn);
+              // alert(countuc);                
+            }
+            if(countuc||countlc||countn){
+              document.getElementById("helppass").innerHTML="there youve mistaken";
+              document.getElementById("helppass").style.color = "red";
+            }
+            if(repassjs!=passjs){
+              document.getElementById("helprepass").innerHTML="there youve mistaken";
+              document.getElementById("helprepass").style.color = "red";
+            }
+    }
+    function emailvalidate(){
+      var emailjs = document.getElementById("email").value;
+      var character = " ";
+      var i = 0;
+   }
+
 </script>
 
 </body>
